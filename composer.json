@@ -6,7 +6,12 @@
     "type": "project",
     "require": {
         "php": ">=5.5.9",
-        "laravel/framework": "5.1.*"
+        "laravel/framework": "5.1.*",
+        "laravelcollective/html": "^5.1",
+        "caffeinated/modules": "^2.1",
+        "intervention/image": "^2.3",
+        "roumen/feed": "^2.9",
+        "maatwebsite/excel": "^2.1"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
