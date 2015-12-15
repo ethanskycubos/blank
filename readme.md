@@ -25,26 +25,64 @@
 	
 	'Form'       => Collective\Html\FormFacade::class,
 	'Html'       => Collective\Html\HtmlFacade::class,
+	
 
 #### Modules (caffeinated/modules)
 
+	composer require caffeinated/modules
+	
+	config/app.php
+	
+	Caffeinated\Modules\ModulesServiceProvider::class,
+	
+	fascade
+	
+	'Module'     => Caffeinated\Modules\Facades\Module::class,
+	
+
 #### Image Manipulation (intervention/image)
+
+	composer require intervention/image
+	
+	config/app.php
+	
+	Intervention\Image\ImageServiceProvider::class,
+	
+	fascade
+	
+	'Image'      => Intervention\Image\Facades\Image::class,
+	
 
 #### Feeds (roumen/feed)
 
+	composer require roumen/feed
+	
+	config/app.php
+	
+	Roumen\Feed\FeedServiceProvider::class,
+	
+	fascade
+	
+	'Feed'       => Roumen\Feed\Facades\Feed::class,
+	
+
 #### Excel (maatwebsite/excel)
 
+	composer require maatwebsite/excel
+	
+	config/app.php
+	
+	Maatwebsite\Excel\ExcelServiceProvider::class,
+	
+	fascade
+	
+	'Excel'      => Maatwebsite\Excel\Facades\Excel::class,
+	
 
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
 
-## Contributing
+## Support
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+If you have any questions, please feel free to visit our site [Philippines Outsourcing](http://philippineglobaloutsourcing.com/).
 
-## Security Vulnerabilities
+Or email me [sky@philippineglobaloutsourcing.com](mailto:sky@philippineglobaloutsourcing.com)
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
-
-### License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
