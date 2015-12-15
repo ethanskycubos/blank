@@ -1,6 +1,5 @@
 ## Laravel PHP Framework
 
-
     "require": {
         "php": ">=5.5.9",
         "laravel/framework": "5.1.*",
@@ -16,12 +15,16 @@
 
 #### Html/Form Builder (laravelcollective/html)
 
-composer require laravelcollective/html
-
-Collective\Html\HtmlServiceProvider::class,
-
-'Form'       => Collective\Html\FormFacade::class,
-'Html'       => Collective\Html\HtmlFacade::class,
+	composer require laravelcollective/html
+	
+	config/app.php
+	
+	Collective\Html\HtmlServiceProvider::class,
+	
+	fascades
+	
+	'Form'       => Collective\Html\FormFacade::class,
+	'Html'       => Collective\Html\HtmlFacade::class,
 
 #### Modules (caffeinated/modules)
 
