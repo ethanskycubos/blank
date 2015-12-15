@@ -26,16 +26,30 @@
 		</div>
 		<div id="navbar" class="navbar-collapse collapse">
 			<ul class="nav navbar-nav">
-				<li class="active"><a href="#">Home</a></li>
-				<li><a href="javascript::null()">God</a></li>
+				<li><a href="/">Home</a></li>
+				<li><a href="/god">God</a></li>
 			</ul>
 
 			<ul class="nav navbar-nav navbar-right">
 				<li class="dropdown">
-					<a href="javascript::null()" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dashboard <span class="caret"></span></a>
+					<a href="javascript::null()" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+					<?php if(Auth::guest()): ?>
+						Dashboard
+					<?php else: ?>
+						<?php echo e(Auth::user()->name); ?>
+
+					<?php endif; ?>
+					<span class="caret"></span>
+					</a>
 					<ul class="dropdown-menu">
-						<li><a href="/login">Login</a></li>
-						<li><a href="/register">Register</a></li>
+
+						<?php if(Auth::guest()): ?>
+							<li><a href="/register"><i class="fa fa-btn fa-heart"></i>Register</a></li>
+							<li><a href="/login"><i class="fa fa-btn fa-sign-in"></i>Login</a></li>
+						<?php else: ?>
+							<li><a href="/logout"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
+						<?php endif; ?>
+
 					</ul>
 				</li>
 			</ul>

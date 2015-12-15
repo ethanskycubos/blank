@@ -6,7 +6,7 @@
 	<div class="row">
 		<div class="jumbotron">
 			<h1>{{ (isset($title)? $title : 'Welcome') }}</h1>
-			<p>Welcome to God</p>
+			<p>This is your dashboard <a href="http://philippineglobaloutsourcing.com">Philippines Outsourcing</a></p>
 		</div>
 	</div>
 </div>

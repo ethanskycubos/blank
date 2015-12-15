@@ -1,0 +1,13 @@
+<?php $__env->startSection('content'); ?>
+
+<div class="container">
+	<div class="row">
+		<div class="jumbotron">
+			<h1><?php echo e((isset($title)? $title : 'Welcome')); ?></h1>
+			<p>Welcome to God</p>
+		</div>
+	</div>
+</div>
+
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('admin.layout', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

@@ -1,6 +1,6 @@
-<?php namespace App\Modules\God\Http\Controllers;
+<?php namespace App\Modules\Dashboard\Http\Controllers;
 
-// use App\Models\God;
+// use App\Models\Dashboard;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -19,7 +19,7 @@ use Illuminate\Http\Request;
  * edit view (ajax)
  */
 
-class GodController extends Controller {
+class DashboardController extends Controller {
 
 	public function __construct(Request $request) 
 	{
@@ -27,7 +27,7 @@ class GodController extends Controller {
 
 	public function index()
 	{
-		$title = 'God';
+		$title = 'Dashboard';
 		return view('god::index', compact('title'));
 	}
 

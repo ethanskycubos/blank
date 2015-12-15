@@ -26,16 +26,29 @@
 		</div>
 		<div id="navbar" class="navbar-collapse collapse">
 			<ul class="nav navbar-nav">
-				<li class="active"><a href="#">Home</a></li>
-				<li><a href="javascript::null()">God</a></li>
+				<li><a href="/">Home</a></li>
+				<li><a href="/god">God</a></li>
 			</ul>
 
 			<ul class="nav navbar-nav navbar-right">
 				<li class="dropdown">
-					<a href="javascript::null()" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dashboard <span class="caret"></span></a>
+					<a href="javascript::null()" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+					@if (Auth::guest())
+						Dashboard
+					@else
+						{{ Auth::user()->name }}
+					@endif
+					<span class="caret"></span>
+					</a>
 					<ul class="dropdown-menu">
-						<li><a href="/login">Login</a></li>
-						<li><a href="/register">Register</a></li>
+
+						@if (Auth::guest())
+							<li><a href="/register"><i class="fa fa-btn fa-heart"></i>Register</a></li>
+							<li><a href="/login"><i class="fa fa-btn fa-sign-in"></i>Login</a></li>
+						@else
+							<li><a href="/logout"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
+						@endif
+
 					</ul>
 				</li>
 			</ul>

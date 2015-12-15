@@ -11,8 +11,14 @@
 |
 */
 
+Route::get('home', function () {
+	$title = "home";
+    return view('admin.pages.welcome', compact('title'));
+});
+
 Route::get('/', function () {
-    return view('welcome');
+	$title = "Root";
+    return view('admin.pages.welcome', compact('title'));
 });
 
 
