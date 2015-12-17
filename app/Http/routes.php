@@ -34,3 +34,6 @@ Route::post('register', 'Auth\AuthController@postRegister');
 // Route::get('login', function () {
 //     return view('admin.auth.login');
 // });
+
+
+Route::resource('posts', 'PostsController');

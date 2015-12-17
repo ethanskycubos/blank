@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Post <?php echo e((isset($post->title) ? $post->title : 'Something')); ?></title>
+</head>
+<body>
+	<h1> <?php echo e($post->title); ?> </h1>
+	<?php if (Gate::check('update-post', $post)): ?>
+		<a href="javascript():null ">Update this Post</a>
+	<?php endif; ?>
+</body>
+</html>

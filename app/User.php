@@ -36,4 +36,10 @@ class User extends Model implements AuthenticatableContract,
      * @var array
      */
     protected $hidden = ['password', 'remember_token'];
+
+
+    public function owns($related) {
+        return $this->id == $related->user_id;
+    }
+
 }
